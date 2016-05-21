@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Getting started with AngularJS - tuto-angularjs-code-maven.com</title>
+        <title>Hello World with AngularJS module and controller - tuto-angularjs-code-maven.com</title>
 
         <!-- Bootstrap CSS -->
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
@@ -17,44 +17,36 @@
         <![endif]-->
     </head>
     <body>
-        <div class="container" ng-app>
+        <div class="container" ng-app="MyApp">
             <h1 class="text-center">tuto-angularjs-code-maven.com
                 <a class="btn btn-default btn-lg" href="../" role="button">Home</a>
             </h1>
-            <h2 class="text-center">Getting started with AngularJS</h2>
+            <h2 class="text-center">Hello World with AngularJS module and controller</h2>
             <hr>
 
             <section class="container">
-                <h3>Hello World with AngularJS
-                    <a class="btn btn-info" href="https://gist.github.com/rogeriopradoj/0894451937227c17153a179a15051893" role="button">Open raw code</a>
+                <h3>Hello World Controller
+                    <a class="btn btn-info" href="https://gist.github.com/rogeriopradoj/b04353759db19d20f929900161d9f249" role="button">Open raw code</a>
                 </h3>
-                <p>
-                    Hello {{ "World" }}
-                </p>
-            </section>
-
-            <section class="container">
-                <h3>Variables in AngularJS expressions
-                    <a class="btn btn-info" href="https://gist.github.com/rogeriopradoj/ac5b861a92fb0c6f21620114dc4c1f0f" role="button">Open raw code</a>
-                </h3>
-                <p>
-                    {{ x = 23; y= 19; x + y }}
-                </p>
-            </section>
-
-            <section class="container">
-                <h3>Separate variable assignment and usage into two expressions
-                    <a class="btn btn-info" href="https://gist.github.com/rogeriopradoj/9cc0cbc4fcd40c3b7dc0aebe3a667693" role="button">Open raw code</a>
-                </h3>
-                <div>
-                    <p>Result {{ x + y}}</p>
-                    <p>Assignment: {{ x = 23; y = 19 }}</p>
-                    <p>Assignment fixed: {{ x = 23; y = 19; null }}</p>
-                    <p>Result {{ x + y}}</p>
+                <div ng-controller="HelloWorldController">
+                    <h4>{{greeting}}</h4>
                 </div>
             </section>
+
+            <section class="container">
+                <h3>Hello user Controller
+                    <a class="btn btn-info" href="https://gist.github.com/rogeriopradoj/b04353759db19d20f929900161d9f249" role="button">Open raw code</a>
+                </h3>
+                <div ng-controller="HelloUserController">
+                    <input ng-model="name" ng-keyup="NameChange()">
+                    <h4>{{greeting}}</h4>
+                    <h5>{{name}}</h5>
+                </div>
+            </section>
+
         </div>
         <a href="https://github.com/rogeriopradoj/tuto-angularjs-code-maven.com"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="./index.js"></script>
     </body>
 </html>
