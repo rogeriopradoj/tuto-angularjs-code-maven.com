@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>AngularJS - first binding - tuto-angularjs-code-maven.com</title>
+
+        <!-- Bootstrap CSS -->
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="container" ng-app>
+            <h1 class="text-center">tuto-angularjs-code-maven.com
+                <a class="btn btn-default btn-lg" href="../" role="button">Home</a>
+            </h1>
+            <h2 class="text-center">AngularJS - first binding</h2>
+            <hr>
+
+            <section class="container">
+                <h3>Minimal Hello User
+                    <a class="btn btn-info" href="https://gist.github.com/rogeriopradoj/d1e0e2414060ae03abef117d0725c7fd" role="button">Open raw code</a>
+                </h3>
+                <div>
+                    <input ng-model="name">
+                    <h4>Hello, {{name}}</h4>
+                </div>
+            </section>
+
+            <section class="container">
+                <h3>Full Hello User 
+                    <a class="btn btn-info" href="https://gist.github.com/rogeriopradoj/72f3cd6112b6db5a75969f8454d16389" role="button">Open raw code</a>
+                </h3>
+                <div>
+                    <input ng-model="name2" type="text" placeholder="Your name please">
+                    <h4>Hello, {{name2}}</h4>
+                </div>
+            </section>
+
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    </body>
+</html>
