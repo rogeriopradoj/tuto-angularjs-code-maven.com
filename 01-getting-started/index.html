@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Getting started with AngularJS - tuto-angularjs-code-maven.com</title>
+
+        <!-- Bootstrap CSS -->
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="container" ng-app>
+            <h1 class="text-center">tuto-angularjs-code-maven.com
+                <a class="btn btn-default btn-lg" href="../" role="button">Home</a>
+            </h1>
+            <h2 class="text-center">Getting started with AngularJS</h2>
+            <hr>
+
+            <section class="container">
+                <h3>Hello World with AngularJS
+                    <a class="btn btn-info" href="https://gist.github.com/rogeriopradoj/0894451937227c17153a179a15051893" role="button">Open raw code</a>
+                </h3>
+                <p>
+                    Hello {{ "World" }}
+                </p>
+            </section>
+
+            <section class="container">
+                <h3>Variables in AngularJS expressions
+                    <a class="btn btn-info" href="https://gist.github.com/rogeriopradoj/ac5b861a92fb0c6f21620114dc4c1f0f" role="button">Open raw code</a>
+                </h3>
+                <p>
+                    {{ x = 23; y= 19; x + y }}
+                </p>
+            </section>
+
+            <section class="container">
+                <h3>Separate variable assignment and usage into two expressions
+                    <a class="btn btn-info" href="https://gist.github.com/rogeriopradoj/9cc0cbc4fcd40c3b7dc0aebe3a667693" role="button">Open raw code</a>
+                </h3>
+                <div>
+                    <p>Result {{ x + y}}</p>
+                    <p>Assignment: {{ x = 23; y = 19 }}</p>
+                    <p>Assignment fixed: {{ x = 23; y = 19; null }}</p>
+                    <p>Result {{ x + y}}</p>
+                </div>
+            </section>
+        </div>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    </body>
+</html>
