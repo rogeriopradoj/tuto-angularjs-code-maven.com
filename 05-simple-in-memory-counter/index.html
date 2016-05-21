@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Simple in-memory counter with AngularJS - tuto-angularjs-code-maven.com</title>
+
+        <!-- Bootstrap CSS -->
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="container" ng-app="MyApp">
+            <h1 class="text-center">tuto-angularjs-code-maven.com
+                <a class="btn btn-default btn-lg" href="../" role="button">Home</a>
+            </h1>
+            <h2 class="text-center">Simple in-memory counter with AngularJS</h2>
+            <hr>
+
+            <section class="container">
+                <h3>Simple button to increment counter</h3>
+                <div>
+                    <button ng-init="counter = 0" ng-click="counter = counter + 1">Increment</button>
+                    {{counter}}
+                </div>
+            </section>
+
+            <section class="container">
+                <h3>Increment and decrement buttons</h3>
+                <div>
+                    <div ng-init="counter2 = 0"></div>
+                    <button ng-click="counter2 = counter2 + 1">Increment</button>
+                    <button ng-click="counter2 = counter2 - 1">Decrement</button>
+                    {{counter2}}
+                </div>
+            </section>
+
+            <section class="container">
+                <h3>In-memory counter with controller</h3>
+                <div ng-controller="CounterController">
+                    <button ng-click="counter3 = counter3 + 1">Increment</button>
+                    <button ng-click="decrement()">Decrement</button>
+                    {{counter3}}
+                </div>
+            </section>
+
+        </div>
+        <a href="https://github.com/rogeriopradoj/tuto-angularjs-code-maven.com"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="./index.js"></script>
+    </body>
+</html>
