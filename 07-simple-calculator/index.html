@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Home - tuto-angularjs-code-maven.com</title>
+        <title>A simple calculator in AngularJS - tuto-angularjs-code-maven.com</title>
 
         <!-- Bootstrap CSS -->
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
@@ -15,28 +15,32 @@
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
-        <style>
-            .list-group a:nth-child(odd) {
-            background-color: #fafafa;
-            }
-        </style>
     </head>
     <body>
         <div class="container">
-            <h1 class="text-center">tuto-angularjs-code-maven.com</h1>
-            <h2 class="text-center">Home</h2>
+            <h1 class="text-center">tuto-angularjs-code-maven.com
+                <a class="btn btn-default btn-lg" href="../" role="button">Home</a>
+            </h1>
+            <h2 class="text-center">A simple calculator in AngularJS</h2>
             <hr>
 
-            <div class="list-group">
-                <a href="01-getting-started" class="list-group-item">Getting started with AngularJS</a>
-                <a href="02-first-binding" class="list-group-item">AngularJS - first binding</a>
-                <a href="03-hello-world-module-controller" class="list-group-item">Hello World with AngularJS module and controller</a>
-                <a href="04-add-numbers" class="list-group-item">Add numbers with AngularJS</a>
-                <a href="05-simple-in-memory-counter" class="list-group-item">Simple in-memory counter with AngularJS</a>
-                <a href="06-automatic-counter" class="list-group-item">Automatic counter using AngularJS</a>
-                <a href="07-simple-calculator" class="list-group-item">A simple calculator in AngularJS</a>
-            </div>
+            <section class="container">
+                <div ng-app="calculatorApp" ng-controller="CalculatorController">
+                    <p><input type="number" ng-model="a"></p>
+                    <p><input type="number" ng-model="b"></p>
+                    <p><select ng-model="operator">
+                        <option>+</option>
+                        <option>*</option>
+                        <option>-</option>
+                        <option>/</option>
+                     </select></p>
+                    <p>{{ result() }}</p>
+                </div>
+            </section>
+
         </div>
         <a href="https://github.com/rogeriopradoj/tuto-angularjs-code-maven.com"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="./index.js"></script>
     </body>
 </html>
