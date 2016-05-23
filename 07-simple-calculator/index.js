@@ -1,4 +1,4 @@
-angular.module('calculatorApp', [])
+angular.module('todoApp', [])
    .controller('CalculatorController', function($scope) {
         $scope.result = function() {
             if ($scope.operator == '+') {
